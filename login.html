@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   
+<html lang="pt-br">
+<head>
+	<title>EducacaoZone | Secretaria Municipal da Educação de Itapeva/SP</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="expires" content="-1" />
+
+	<!-- insert to Bootstrap 4 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+
+	<style type="text/css">
+
+		body{
+			background-image: url('img/bg-hotspot.jpg');
+		}
+
+		#hp-header{
+			align-content: center;
+    		/* background-image: url('img/capa2.png'); */
+			/* background-color: rgb(5, 221, 5); */
+			background-image: linear-gradient(to left, rgb(0, 197, 43), rgb(0, 3, 175));
+    		background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		#hp-title{
+			color: white;
+			font-size: 22px;
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+			margin-left: 15px;
+		}
+
+		#hp-logo-sme{
+			margin: 3%;
+		}
+
+		#hp-logo-itapeva{
+			text-align: center;
+			margin: 5%;
+			margin-top: 2.5%;
+			margin-bottom: 1%;
+		}
+
+		#hp-footer-content-left{
+			font-size: 10px;
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+
+		#hp-footer-content-right{
+			font-size: 10px;
+			font-style: italic;
+			text-align: right;
+			position: relative;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+
+		#hp-logo-google{
+			margin: 2%;
+			margin-top: 0px;
+		}
+
+		#hp-content-form{
+			text-align: center;
+			margin: 3%;
+			margin-bottom: 20px;
+		}
+
+		#hp-form-submit{
+			align-content: center;
+			text-align: center;
+			margin-bottom: 0px;
+		}
+
+		#hp-blank{
+			margin: 3%;
+			text-align: center;
+		}
+	</style>
+
+</head>
+
+<body>
+	
+	<div class="container-fluid" id="hp-general-body">
+		<!-- header -->
+		<div class="row" id="hp-header">
+			<div class="col" align="left" >
+				<h1 class="h1" id="hp-title"><i>EM Profª. Thereza Silveira Mello</i></h1>
+			</div> <!-- end col-12-->
+			<div class="col" align="right"><img src="img/logoeduc.png" id="hp-logo-sme" width="307" height="102" alt="Logo SME"/></div>	
+		</div> <!-- end row -->
+		
+		<div>
+		$(if chap-id)	
+			<form name="sendin" action="$(link-login-only)" method="post">
+				<input type="hidden" name="username" />
+				<input type="hidden" name="password" />
+				<input type="hidden" name="dst" value="$(link-orig)" />
+				<input type="hidden" name="popup" value="true" />
+			</form>
+
+			<script type="text/javascript" src="/md5.js"></script>
+			<script type="text/javascript">
+			<!--
+	    		function doLogin() {
+					document.sendin.username.value = document.login.username.value;
+					document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+					document.sendin.submit();
+					return false;
+	    		}
+			//-->
+			</script>
+		$(endif)
+		</div>
+
+		&nbsp; <!-- row broken -->
+
+		<div class="row" id="hp-content-form">
+			<div class="col-12"> <!-- text column -->
+				<img id="hp-logo-google" src="img/glworkspace.png" alt="Google Workspace Lg" width="256" height="33">
+				<!-- <h3><strong>ACESSO RESTRITO</strong></h3> -->
+				<p><strong>Você deve se autenticar na rede usando sua CONTA GOOGLE INSTITUCIONAL!</strong></p> 
+				<p style="color: #FF0000; font-size: 14px"><strong>Ex: seunome@educacao.itapeva.sp.gov.br</strong></p>
+			</div> <!-- end column -->
+		</div> <!-- end row -->
+
+		<div class="row">
+			<div class="col-12" id="hp-form-submit">
+				<form name="login" action="$(link-login-only)" method="post"
+					$(if chap-id) onSubmit="return doLogin()" $(endif)>
+					<input type="hidden" name="dst" value="$(link-orig)" />
+					<input type="hidden" name="popup" value="true" />
+
+					<div class="form-group" align="center">
+						<input class="form-control" style="width: 400px; text-align: center" name="username" type="text" placeholder="@educacao.itapeva.sp.gov.br"/> <br>
+						<input class="btn btn-primary" style="width: 100px;" type="submit" value="Login">
+					</div>
+				</form>
+			</div> <!-- end column form-->
+		</div> <!-- end row -->
+		
+	<div id="hp-blank">
+		$(if error)<div style="color: #ff0000; font-size: 9px">$(error)</div>$(endif)
+	</div>
+
+	<div class="row">
+		<div class="col-sm">
+			<p id="hp-footer-content-left" style="color: #000000; font-size: 10px">Departamento de Tecnologia e Estatística Educacional<br/>Suporte Técnico: (15) 3522-3079 / 3524-2511</p>
+		</div>
+		<div class="col-sm" id="hp-logo-itapeva">
+			<img src="img/itapeva-lg.png" alt="Prefeitura Itapeva LG" width="200" height="70" st>
+		</div>
+		<div class="col-sm" style="text-align: center;">
+			<p id="hp-footer-content-right" style="color: #000000; font-size: 10px;">Mikrotik Hotspot Gateway Technology</p>
+		</div>
+	</div>
+	
+
+	
+<div align="center" class="col" style="margin: 10px; margin-left: 10px">
+  <table width="100%" border="0">
+    <tbody>
+      <tr>
+        <td align="left"></td>
+        <td align="center"></td>
+        <td align="right"></td>
+      </tr>
+    </tbody>
+  </table>
+	
+</div>
+</div><!-- end container -->
+<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>
+	
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+</body>
+</html>
