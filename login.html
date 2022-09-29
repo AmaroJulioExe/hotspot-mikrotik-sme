@@ -1,20 +1,28 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
    
 <html lang="pt-br">
 <head>
-	<title>EducacaoZone | Secretaria Municipal da Educação de Itapeva/SP</title>
+	<title>Educacaozone | Secretaria Municipal da Educação de Itapeva/SP</title>
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="pragma" content="no-cache" />
 	<meta http-equiv="expires" content="-1" />
 
+	<meta charset="utf-8">
+
 	<!-- insert to Bootstrap 4 -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
-
 	<style type="text/css">
 
 		body{
@@ -32,10 +40,10 @@
 
 		#hp-title{
 			color: white;
-			font-size: 22px;
-			position: absolute;
+			font-size: 20px;
+			position: relative;
 			top: 50%;
-			transform: translate(0, -50%);
+			transform: translate(0, 40%);
 			margin-left: 15px;
 		}
 
@@ -52,9 +60,9 @@
 
 		#hp-footer-content-left{
 			font-size: 10px;
-			position: absolute;
+			position: relative;
 			top: 50%;
-			transform: translate(0, -50%);
+			transform: translate(0, 30%);
 		}
 
 		#hp-footer-content-right{
@@ -63,7 +71,7 @@
 			text-align: right;
 			position: relative;
 			top: 50%;
-			transform: translate(0, -50%);
+			transform: translate(0, 30%);
 		}
 
 		#hp-logo-google{
@@ -89,46 +97,49 @@
 		}
 	</style>
 
+	<!-- JS -->
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flip.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
 </head>
 
 <body>
 	
-	<div class="container-fluid" id="hp-general-body">
+	<div class="container-fluid">
 		<!-- header -->
 		<div class="row" id="hp-header">
-			<div class="col" align="left" >
-				<h1 class="h1" id="hp-title"><i>EM Profª. Thereza Silveira Mello</i></h1>
+			<div class="col-sm" align="left" id="hp-title">
+				<h1 class="h1" style="font-size: 20px;"><i>EM Profª. Thereza Silveira Mello</i></h1>
 			</div> <!-- end col-12-->
-			<div class="col" align="right"><img src="img/logoeduc.png" id="hp-logo-sme" width="307" height="102" alt="Logo SME"/></div>	
+			<div class="col" align="right"><img src="img/logoeduc2.png" id="hp-logo-sme" width="307" height="102" alt="Logo SME"/></div>	
 		</div> <!-- end row -->
 		
-		<div>
-		$(if chap-id)	
-			<form name="sendin" action="$(link-login-only)" method="post">
-				<input type="hidden" name="username" />
-				<input type="hidden" name="password" />
-				<input type="hidden" name="dst" value="$(link-orig)" />
-				<input type="hidden" name="popup" value="true" />
-			</form>
-
-			<script type="text/javascript" src="/md5.js"></script>
-			<script type="text/javascript">
-			<!--
-	    		function doLogin() {
-					document.sendin.username.value = document.login.username.value;
-					document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
-					document.sendin.submit();
-					return false;
-	    		}
-			//-->
-			</script>
-		$(endif)
-		</div>
+		$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
 
 		&nbsp; <!-- row broken -->
 
 		<div class="row" id="hp-content-form">
-			<div class="col-12"> <!-- text column -->
+			<div class="col-sm-12"> <!-- text column -->
 				<img id="hp-logo-google" src="img/glworkspace.png" alt="Google Workspace Lg" width="256" height="33">
 				<!-- <h3><strong>ACESSO RESTRITO</strong></h3> -->
 				<p><strong>Você deve se autenticar na rede usando sua CONTA GOOGLE INSTITUCIONAL!</strong></p> 
@@ -137,14 +148,15 @@
 		</div> <!-- end row -->
 
 		<div class="row">
-			<div class="col-12" id="hp-form-submit">
+			<div class="col-sm-12" id="hp-form-submit">
 				<form name="login" action="$(link-login-only)" method="post"
 					$(if chap-id) onSubmit="return doLogin()" $(endif)>
 					<input type="hidden" name="dst" value="$(link-orig)" />
 					<input type="hidden" name="popup" value="true" />
 
 					<div class="form-group" align="center">
-						<input class="form-control" style="width: 400px; text-align: center" name="username" type="text" placeholder="@educacao.itapeva.sp.gov.br"/> <br>
+						<input class="form-control" style="width: 400px; text-align: center" name="username" type="text" value="$(username)" placeholder="@educacao.itapeva.sp.gov.br"/> <br>
+						<input style="width: 120px" name="password" type="hidden" />
 						<input class="btn btn-primary" style="width: 100px;" type="submit" value="Login">
 					</div>
 				</form>
@@ -160,7 +172,7 @@
 			<p id="hp-footer-content-left" style="color: #000000; font-size: 10px">Departamento de Tecnologia e Estatística Educacional<br/>Suporte Técnico: (15) 3522-3079 / 3524-2511</p>
 		</div>
 		<div class="col-sm" id="hp-logo-itapeva">
-			<img src="img/itapeva-lg.png" alt="Prefeitura Itapeva LG" width="200" height="70" st>
+			<!-- <img src="img/itapeva-lg.png" alt="Prefeitura Itapeva LG" width="200" height="70" st> -->
 		</div>
 		<div class="col-sm" style="text-align: center;">
 			<p id="hp-footer-content-right" style="color: #000000; font-size: 10px;">Mikrotik Hotspot Gateway Technology</p>
@@ -169,18 +181,7 @@
 	
 
 	
-<div align="center" class="col" style="margin: 10px; margin-left: 10px">
-  <table width="100%" border="0">
-    <tbody>
-      <tr>
-        <td align="left"></td>
-        <td align="center"></td>
-        <td align="right"></td>
-      </tr>
-    </tbody>
-  </table>
-	
-</div>
+
 </div><!-- end container -->
 <script type="text/javascript">
 <!--
